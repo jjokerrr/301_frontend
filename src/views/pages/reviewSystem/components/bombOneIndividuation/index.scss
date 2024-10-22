@@ -1,0 +1,176 @@
+.individuationPage{
+    position: absolute;
+    top: 30px;
+    left:40px;
+    width: calc(100% - 80px);
+    height: 600px;
+    background-color: #3A3EA7;
+    z-index:999;
+    display: flex;
+    flex-direction: column;
+    &Close{
+      .el-button, .el-button:focus, .el-button:hover{
+        position:absolute;
+        right: 10px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        background-color: transparent;
+        border: transparent;
+        .el-icon-close{
+          width: 40px;
+          height: 40px;
+          color: #d4d4d4;
+          font-size:40px;
+        }
+      }
+    }
+    &Title{
+      height: 40px;
+      margin: 15px 2px 0px 2px;
+      display: flex;
+      flex-direction: row;
+      padding-left: 10px;
+      border-left: 2px solid #05BCDE;
+      border-right: 2px solid #05BCDE;
+      .picture{
+        height: 35px;
+        width: 35px;
+        background: url(../../../../../assets/background/other/title.png) no-repeat;
+        background-size:contain;
+      }
+      .title{
+        margin: 0px;
+        height: 35px;
+        padding: 0px;
+        margin-left: 10px;
+        color: #5AD2F7;
+        font-size:25px;
+        font-weight: 700;
+      }
+    }
+    &Content{
+      // height: 530px;
+      margin: 0px 2px 15px 2px;
+      display: flex;
+      flex: 1;
+      border-left: 2px solid #06d7fc;
+      border-right: 2px solid #06d7fc;
+      padding: 15px 15px 0 15px;
+      .bombGradeTable{
+        width: 67%;
+        overflow:auto;
+        max-height: 490px;
+        padding-right: 15px;
+        :deep(.el-table thead) {
+          font-size: 16px;
+        }
+        :deep(.el-table){
+          color: #000000;
+        }
+        :deep(.el-table th.el-table__cell){
+          background-color: #5B9CD4;
+          border-top: 1px solid #ffffff;
+          border-left: 1px solid #ffffff;
+          border-bottom: 1px solid #ffffff;
+          text-align: center;
+          color:#ffffff;
+        }
+        :deep(.el-table tr.el-table__row--striped td.el-table__cell){
+          background-color: #D1DEEE;
+        }
+        :deep(.el-table .el-table__cell){
+          text-align: center;
+        }
+        :deep(.el-table td.el-table__cell){
+          border-left: 1px solid #ffffff;
+        }
+      }
+      .personAnalyse{
+        width: 33%;
+        &Video{
+          height: 50%;;
+        }
+        &Chart{
+          margin-top: 20px;
+          height: calc(50% - 20px);
+          border: 2px solid #06d7fc;
+        }
+      }
+      .el-button{
+        font-size: 25px;
+        color: #e4e4e4;
+        background-color: transparent;
+        border: 0px;
+      }
+      .el-button:hover{
+        color: #05BCDE;
+        text-decoration:underline;
+      }
+    }
+    
+    .Interval{
+      width: 100%;
+      height: 15px;
+      display: flex;
+      flex-direction: row;
+      .chunk{
+        height: 15px;
+        width: 15px;
+        border: 2px solid #05BCDE;
+      }
+      .topline{
+        margin: 2px 15px 13px 15px;
+        flex: 1;
+        height: 2px;
+        background-color: #05BCDE;
+      }
+      .bottomline{
+        margin: 11px 15px 2px 15px;
+        flex: 1;
+        height: 2px;
+        background-color: #05BCDE;
+      }
+    }
+    .solutionVideoCover{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000000;
+      opacity:0.6;
+      z-index:99;
+    }
+    .solutionVideoStyle{
+      position: absolute;
+      top:12%;
+      left: 25%;
+      float:left;
+      height: 80%;
+      width: 50%;
+      z-index: 999;
+      border: 2px solid #06d7fc;
+      .el-button, .el-button:focus, .el-button:hover{
+        position:absolute;
+        right: 10px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        background-color: transparent;
+        border: transparent;
+        .el-icon-close{
+          width: 40px;
+          height: 40px;
+          color: #d4d4d4;
+          font-size:40px;
+        }
+      }
+      .solutionVideoContent{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }

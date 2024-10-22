@@ -1,0 +1,59 @@
+.pageTabs{
+    height: 50px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    &Actions{
+        padding: 12px 0px 12px 20px;
+        height: 50px;
+        width: 60%;
+        .el-tag{
+            margin-right: 10px;
+            // color: #000;
+            background-color: #ccc;
+            border: #ccc;
+        }
+        .el-link--info{
+            font-size:large;
+            color: #000000;
+        }
+        .el-link--primary{
+            font-size:large;
+            color: #2882ff;
+        }
+    }
+    &Individuation{
+        text-align: right;
+        height: 50px;
+        width: 40%;
+        padding: 8px 0px 12px 0px;
+        .routerButton{
+            text-decoration: none;
+            font-size:medium;
+            color: #ffffff;
+        }
+        
+    }
+}
+.el-button--info[data-v-da48c260]{
+    border-radius: 15px;
+    // background:#909399;
+}
+.el-button--info[data-v-da48c260]:hover{
+    background:#909399;
+}
+.el-button--medium{
+    border-radius: 15px
+}
+.el-button--primary{
+    background: #2882ff;
+}
+.el-button--primary:hover{
+    background: #2882ff;
+}
+.el-button--primary:focus{
+    background: #2882ff;
+}

@@ -1,0 +1,219 @@
+.ContainerLeft{
+  min-height: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &Topic{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25px;
+    justify-content: space-around;
+    position: relative;
+    &Psychology{
+      position: absolute;
+      left: 35px;
+      height: 22px;
+      margin-bottom: 3px;
+      .el-button, .el-button:focus, .el-button:hover{
+        color: #5AD2F7;
+        font-size: large;
+        font-weight: 700;
+        background-color: transparent;
+        border: transparent;
+        padding: 0px;
+      }
+    }
+    &Individuation{
+      left: 20px;
+      position: absolute;
+      height: 22px;
+      margin-bottom: 3px;
+      .el-button, .el-button:focus, .el-button:hover{
+        color: #5AD2F7;
+        font-size: large;
+        font-weight: 700;
+        background-color: transparent;
+        border: transparent;
+        padding: 0px;
+      }
+    }
+  }
+  &StandAction{
+    height: calc(60%);
+    background: url(../../../../../assets/background/componentBackground.png) no-repeat;
+    &Content{
+      margin: 10px 0px;
+      height: calc(100% - 30px);
+      // flex-grow: 0.3;
+      border-left: 1px solid #05BCDE;
+      border-right: 1px solid #05BCDE;
+      display: flex;
+      flex-direction: column;
+      &Title{
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        padding-left: 30px;
+        .picture{
+          height: 25px;
+          width: 25px;
+          background: url(../../../../../assets/background/other/title.png) no-repeat;
+          background-size:contain;
+        }
+        .title{
+          margin-left: 10px;
+          color: #5AD2F7;
+          font-size: large;
+          font-weight: 700;
+        }
+      }
+      &Value{
+        height: calc(100% - 30px);
+        // border: 1px solid #8e8e8e;
+        margin: 0px 20px 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .title{
+          // margin-left: 10px;
+          margin-bottom: 0;
+          color: #5AD2F7;
+          font-size: 24px;
+          font-weight: 700;
+        }
+        .targetPicture{
+          width: 250px;
+          height: 250px;
+          background: url(../../../../../assets/background/shootReviewSystem/targetPicture.png) center center no-repeat;
+          background-size: cover;
+          z-index:999;
+        }
+      }
+    }
+  }
+  &NodeAction{
+    // display: flex;
+    // flex-direction: column;
+    // width: 100%;
+    // flex: 1;
+    height: 36%;
+    margin-top: 15px;
+    background: url(../../../../../assets/background/componentBackground.png) no-repeat;
+    // height: calc(40% - 15px);
+    &Content{
+      margin-bottom: 10px;
+      margin-top: 10px;
+      height: calc(100% - 30px);
+      // flex: 1;
+      // height: 100%;
+      border-left: 1px solid #05BCDE;
+      border-right: 1px solid #05BCDE;
+      // border-right: 1px solid #858585;
+      display: flex;
+      flex-direction: column;
+      &Title{
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+        .picture{
+          height: 20px;
+          width: 20px;
+          background: url(../../../../../assets/background/other/title.png) no-repeat;
+          background-size:contain;
+        }
+        .title{
+          margin-left: 10px;
+          color: #5AD2F7;
+          font-size: medium;
+          font-weight: 700;
+        }
+      }
+      &Value{
+        flex: 1;
+        margin: 10px 20px 0px 20px;
+        .shootGradeTable{
+          opacity: 0.85;
+          margin-top: 10px;
+          :deep(.el-table thead) {
+            color: #646464;
+            font-size: 16px;
+          }
+          :deep(.el-table){
+            color: #000000;
+            
+          }
+          :deep(.el-table th.el-table__cell){
+            background-color: #1cd9fe;
+            border-top: 1px solid #9f9c9c;
+            border-left: 1px solid #9f9c9c;
+            border-bottom: 1px solid #9f9c9c;
+            text-align: center;
+          }
+          :deep(.el-table .el-table__cell){
+            text-align: center;
+          }
+          :deep(.el-table td.el-table__cell){
+            border-left: 1px solid #ffffff;
+            background-color: #bababa;
+          }
+          
+        }
+      }
+    }
+  }
+  &Analyse{
+    // margin: 10px 0px 10px 0px;
+    min-height: 200px;
+    height: calc(100% - 10px);
+    border-left: 1px solid #5AD2F7;
+    border-right: 1px solid #5AD2F7;
+    display: flex;
+    flex-direction: column;
+    &Title{
+      height: 30px;
+      display: flex;
+      flex-direction: row;
+      padding-left: 30px;
+      .picture{
+        height: 25px;
+        width: 25px;
+        background: url(../../../../../assets/background/other/title.png) no-repeat;
+      }
+      .title{
+        margin-left: 10px;
+        color: #5AD2F7;
+        font-size: large;
+        font-weight: 700;
+      }
+    }
+    &Content{
+      flex: 1;
+      // border: 1px solid #8e8e8e;
+      // width: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 20px 0px 20px;
+    }
+  }
+  .Interval{
+    width: 100%;
+    height: 5px;
+    display: flex;
+    flex-direction: row;
+    .chunk{
+      height: 5px;
+      width: 5px;
+      border: 1px solid #05BCDE;
+    }
+    .line{
+      margin: 2px 10px 2px 10px;
+      flex: 1;
+      height: 1px;
+      background-color: #05BCDE;
+    }
+  }
+  }

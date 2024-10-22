@@ -1,0 +1,54 @@
+.siderLeft{
+    width: 360px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 12px 20px 20px 20px;
+    &Title{
+        height: 50px;
+        color: #000000;
+        hr{
+            margin: 0px;
+        }
+    }
+    &Input{
+        height: calc(100% - 50px);
+        text-align: center;
+        width: 320px;
+        &Video{
+            margin: 20px;
+            margin-left: 60px;
+            margin-right: 60px;
+            width: 200px;
+            height: calc(45% - 20px);
+            background-color: aqua;
+            .upload-demo{
+                height: 180px;
+                width: 200px;
+                    :deep(.el-upload-dragger){
+                        margin: 20px;
+                        height: 160px;
+                        width: 160px;
+                    }
+                
+            }
+        }
+        &Equipmnet{
+            margin: 20px;
+            margin-left: 60px;
+            margin-right: 60px;
+            width: 200px;
+            height: calc(45% - 20px);
+            background-color: aqua;
+        }
+        &Button{
+            
+            .el-button--medium{
+                border-radius: 15px
+            }
+            .el-button--primary{
+                background: #2882ff;
+            }
+        }
+    }
+}

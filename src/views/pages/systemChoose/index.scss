@@ -1,0 +1,59 @@
+.loginPage {
+    background:url(../../../assets/login/SystemChoose.png) no-repeat;
+    background-color: #041A54;
+    opacity: 1;
+    background-size: cover;
+    // background-color: #ccc;
+    height: 100vh;
+    min-width: 1500px;
+    min-height: 750px;
+    &Position{
+      
+      height: 25%;
+      .loginPageTop{
+          height: 35px;
+          padding-top: 8px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          padding-right: 20px;
+          &UserTitle{
+            color: aliceblue;
+            font-size: 17px;
+          }
+          .nowUserInformation{
+              color: #10c6ee;
+              padding-right: 20px;
+              font-size: 17px;
+          }
+          &Item{
+              text-decoration: none;
+              color: #cacaca;
+              padding-left: 20px;
+              font-size: 18px;
+          }
+          margin-bottom: 5px;
+      }
+    }
+    &Context{
+      height: 500px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0px 150px;
+      
+      &Bomb{
+        width: 560px;
+        height: 315px;
+        background:url(../../../assets/login/bombSystem.png) no-repeat;
+        background-size: cover;
+      }
+      &Shoot{
+        background:url(../../../assets/login/shootSystem.png) no-repeat;
+        width: 560px;
+        height: 315px;
+        background-size: cover;
+      }
+    }
+}

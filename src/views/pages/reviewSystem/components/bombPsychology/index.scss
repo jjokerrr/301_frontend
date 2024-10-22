@@ -1,0 +1,129 @@
+.personPsychology{
+    position:absolute;
+    top:80px;
+    left:calc(40px + 20%);
+    width: calc(60% - 80px);
+    height: 600px;
+    background-color: #3A3EA7;
+    z-index:9999;
+    display: flex;
+    flex-direction: column;
+    .el-button, .el-button:focus, .el-button:hover{
+      position:absolute;
+      right: 10px;
+      top: 10px;
+      width: 40px;
+      height: 40px;
+      padding: 0px;
+      background-color: transparent;
+      border: transparent;
+      .el-icon-close{
+        width: 40px;
+        height: 40px;
+        color: #d4d4d4;
+        font-size:40px;
+      }
+    }
+    &Title{
+      height: 35px;
+      margin: 15px 2px 0px 2px;
+      display: flex;
+      flex-direction: row;
+      padding-left: 10px;
+      border-left: 2px solid #05BCDE;
+      border-right: 2px solid #05BCDE;
+      .picture{
+        height: 25px;
+        width: 25px;
+        background: url(../../../../../assets/background/other/title.png) no-repeat;
+        background-size:contain;
+      }
+      .title{
+        margin: 0px;
+        height: 30px;
+        padding: 0px;
+        margin-left: 10px;
+        color: #5AD2F7;
+        font-size:20px;
+        font-weight: 700;
+      }
+    }
+    &Content{
+      flex: 1;
+      margin: 0px 2px 15px 2px;
+      border-left: 2px solid #05BCDE;
+      border-right: 2px solid #05BCDE;
+      display:flex;
+      padding-top: 15px;
+      flex-direction: row;
+      max-height: 505px;
+      &Info{
+        color: #ffffff;
+        overflow:auto;
+        padding-left: 45px;
+        width: 50%;
+        margin-right: 12px;
+        height: 100%;
+        .infoItem{
+          margin-bottom: 12px;
+          &Title{
+            background-color: #5AD2F7;
+            width: 120px;
+            height: 36px;
+            padding: 8px 10px;
+            border-radius: 20px;
+            margin-bottom: 5px;
+          }
+          &SolutionTitle{
+            margin: 0px 0px 0px 30px;
+            font-weight: 700;
+          }
+          &Content{
+            margin-left: 60px;
+            color: #e4e4e4;
+          }
+          &Solution{
+            margin-left: 60px;
+            color: #e4e4e4;
+          }
+        }
+      }
+      &Graph{
+        flex:1;
+        // background-color: #e6d80d;
+        height: 100%;
+        padding-top: 30px;
+        .graphContext{
+          width: 350px;
+          height: 300px;
+          // border: 1px solid #8e8e8e;
+          display: flex;
+          align-items:center;
+          // text-align: center;
+        }
+      }
+    }
+    .Interval{
+      width: 100%;
+      height: 15px;
+      display: flex;
+      flex-direction: row;
+      .chunk{
+        height: 15px;
+        width: 15px;
+        border: 2px solid #05BCDE;
+      }
+      .topline{
+        margin: 2px 15px 13px 15px;
+        flex: 1;
+        height: 2px;
+        background-color: #05BCDE;
+      }
+      .bottomline{
+        margin: 11px 15px 2px 15px;
+        flex: 1;
+        height: 2px;
+        background-color: #05BCDE;
+      }
+    }
+  }

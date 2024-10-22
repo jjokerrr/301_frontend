@@ -1,0 +1,340 @@
+.ContainerRight{
+    min-height: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &Topic{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 25px;
+      justify-content: space-around;
+      position: relative;
+      &Psychology{
+        position: absolute;
+        left: 35px;
+        height: 22px;
+        margin-bottom: 3px;
+        .el-button, .el-button:focus, .el-button:hover{
+          color: #5AD2F7;
+          font-size: large;
+          font-weight: 700;
+          background-color: transparent;
+          border: transparent;
+          padding: 0px;
+        }
+      }
+      &Individuation{
+        right: 20px;
+        position: absolute;
+        height: 22px;
+        margin-bottom: 3px;
+        .el-button, .el-button:focus, .el-button:hover{
+          color: #5AD2F7;
+          font-size: large;
+          font-weight: 700;
+          background-color: transparent;
+          border: transparent;
+          padding: 0px;
+        }
+      }
+    }
+    &Person{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 130px;
+      background: url(../../../../../assets/background/componentBackground.png) no-repeat;
+      &Content{
+        margin: 10px 0px;
+        width: 100%;
+        flex: 1;
+        border-left: 1px solid #05BCDE;
+        border-right: 1px solid #05BCDE;
+        &Title{
+          height: 20px;
+          display: flex;
+          flex-direction: row;
+          padding-left: 10px;
+          position: relative;
+          margin-bottom: 10px;
+          .picture{
+            height: 20px;
+            width: 20px;
+            background: url(../../../../../assets/background/other/title.png) no-repeat;
+            background-size:contain;
+          }
+          .title{
+            margin-left: 10px;
+            color: #5AD2F7;
+            font-size: medium;
+            font-weight: 700;
+          }
+          // .groupDropdown{
+          //   height: 30px;
+          //   width: 80px;
+          //   margin-right: 10px;
+          //   position: absolute;
+          //   right: 10px;
+          //   &Button{
+          //     border: 2px solid #5AD2F7;
+          //     color: #5AD2F7;
+          //     padding: 0px;
+          //     width: 80px;
+          //     height: 30px;
+          //     background-color: transparent;
+          //   }
+          // }
+        }
+        
+        &Value{
+          height: 60px;
+          padding-top: 10px;
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .onePersionDiv{
+            height: 65px;
+            width: 60px;
+            margin: 10px 10px 0px 10px;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            .el-button--medium{
+              // border: #9a9a9b;
+              // background-color: #00fbff;
+              border-radius: 50%;
+              height: 40px;
+              width: 40px;
+              padding: 0px;
+              margin-left: 10px;
+            }
+            .onePersionName{
+              height: 25px;
+              width: 60px;
+              margin: 0px;
+              color: #dcdcdc;
+              font-size: 18px;
+              // background-color: #ff0000;
+            }
+          }
+        }
+      }
+    }
+    &Tap{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 70px;
+      margin: 15px 0px;
+      // background: url(../../../assets/background/componentBackground.png) no-repeat;
+      &Content{
+        margin: 10px 0px 10px 0px;
+        // padding: 15px 0px;
+        text-align: center;
+        flex: 1;
+        justify-content: space-around;
+        border-left: 1px solid #05BCDE;
+        border-right: 1px solid #05BCDE;
+        .el-button--medium{
+          background-color:transparent;
+          border: transparent;
+          font-size: large;
+          font-weight: 500;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          padding: 0px;
+        }
+        .buttonDischeck{
+          color: #ffffff;
+        }
+        .buttonCheck{
+          color: #05BCDE;
+        }
+      }
+    }
+    &Video{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: calc(50% - 125px);
+      background: url(../../../../../assets/background/componentBackground.png) no-repeat;
+      &Content{
+        margin: 10px 0px;
+        height: calc(100% - 30px);
+        border-left: 1px solid #05BCDE;
+        border-right: 1px solid #05BCDE;
+        display: flex;
+        flex-direction: column;
+        &Title{
+          height: 20px;
+          display: flex;
+          flex-direction: row;
+          padding-left: 10px;
+          .picture{
+            height: 20px;
+            width: 20px;
+            background: url(../../../../../assets/background/other/title.png) no-repeat;
+            background-size:contain;
+          }
+          .title{
+            margin-left: 10px;
+            color: #5AD2F7;
+            font-size: medium;
+            font-weight: 700;
+          }
+        }
+        &Value{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1;
+          margin: 10px 20px 0px 20px;
+          // border: 1px solid #fd0000;
+        }
+      }
+    }
+    &Analyse{
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+      width: 100%;
+      height: calc(50% - 145px);
+      background: url(../../../../../assets/background/componentBackground.png) no-repeat;
+      &Content{
+        margin: 10px 0px;
+        height: calc(100% - 50px);
+        flex: 1;
+        border-left: 1px solid #05BCDE;
+        border-right: 1px solid #05BCDE;
+        display: flex;
+        flex-direction: column;
+        &Title{
+          height: 20px;
+          display: flex;
+          flex-direction: row;
+          padding-left: 10px;
+          .picture{
+            height: 20px;
+            width: 20px;
+            background: url(../../../../../assets/background/other/title.png) no-repeat;
+            background-size:contain;
+          }
+          .title{
+            margin-left: 10px;
+            color: #5AD2F7;
+            font-size: medium;
+            font-weight: 700;
+          }
+        }
+        &Value{
+          flex: 1;
+          // height: calc(100% - 20px);
+          overflow:auto;
+          margin-top: 10px;
+          // background-color: #8e8e8e;
+          .psychology{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            &Title{
+              color: #5AD2F7;
+              font-weight: 550;
+            }
+            &Result{
+              flex: 1;
+              // background-color: #b5f5bb;
+              margin-left: 30px;
+              display: flex;
+              align-items:center;
+              &Content{
+                color: #ffffff;
+                margin: 0px;
+                margin-left: 10px;
+                font-size: small;
+              }
+            }
+          }
+          .action{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            &Title{
+              color: #5AD2F7;
+              font-weight: 550;
+            }
+            &Result{
+              flex: 1;
+              // background-color: #b5f5bb;
+              margin-left: 30px;
+              margin-bottom: 5px;
+              display: flex;
+              align-items:center;
+              &Content{
+                color: #ffffff;
+                margin: 0px;
+                margin-left: 10px;
+                font-size: small;
+              }
+            }
+          }
+          .successState{
+            height: 20px;
+            width: 20px;
+            background-color: #0de681;
+            border-radius: 13px;
+          }
+          .warningState{
+            height: 20px;
+            width: 20px;
+            background-color: #f2ff00;
+            border-radius: 13px;
+          }
+          .dangerState{
+            height: 20px;
+            width: 20px;
+            background-color: #ff0000;
+            border-radius: 13px;
+          }
+        }
+      }
+    }
+    .Interval{
+      width: 100%;
+      height: 5px;
+      display: flex;
+      flex-direction: row;
+      .chunk{
+        height: 5px;
+        width: 5px;
+        border: 1px solid #05BCDE;
+      }
+      .line{
+        margin: 2px 10px 2px 10px;
+        flex: 1;
+        height: 1px;
+        background-color: #05BCDE;
+      }
+    }
+  }
+  // .groupDropdownMenu{
+  //   min-width: 80px;
+  //   max-height: 300px;
+  //   overflow:auto;
+  //   background-color: #00d9ff;
+  //   border: 20px;
+  //   opacity: 0.8;
+  //   border-bottom: 1px solid #585858;
+  //   &Item{
+  //     border-top: 1px solid #585858;
+  //     background-color: #00d9ff;
+  //     color: #000000;
+  //     font-weight: 500;
+  //   }
+  // }

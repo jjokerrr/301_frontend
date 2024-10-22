@@ -1,0 +1,48 @@
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh; !* 使容器铺满整个屏幕高度 *!*/
+  height: auto;
+  position: relative; /* 让内部元素的定位相对于容器 */
+}
+
+// .centered-image img {
+//   /*max-width: 100%;*/
+//   /*max-height: 100%;*/
+//   width: 200px;//4906
+//   height: 200px;
+// }
+
+.target-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* 将点样式设置为圆形 */
+  transform: translate(-50%, -50%); /* 将点的位置调整为相对于自身的中心点 */
+}
+
+.center-dot {
+  background-color: red;
+}
+
+.yellow-dot {
+  background-color: yellow;
+}
+
+.black-dot {
+  background-color: black;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+.input-container label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.input-container input {
+  width: 100px;
+}

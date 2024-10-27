@@ -15,6 +15,13 @@
         <div class="picture"></div>
         <p class="title" @click="clickReset()">实时视频</p>
         <div class="optionComponent">
+          <div class="optionComponentVideoSrc" style="margin-right: 25px;width: 300px;">
+            <el-input v-model="nowVideoSrcIP" placeholder="请输入IP" >
+            </el-input>
+          </div>
+          <div class="optionComponentSendSrc" :style="{ marginRight: '25px', border: '2px solid #5AD2F7' }">
+            <el-button @click="sendSrc()">修改</el-button>
+          </div>
           <div class="optionComponentAlgorithmType" style="margin-right: 20px;"> <!-- 假设间距为20px -->
             <el-dropdown class="algorithmDropdown" trigger="click">
               <el-button class="algorithmDropdownButton" type="primary">{{
@@ -137,7 +144,9 @@ export default {
       showPhysiologyLineChart: true,
       tableData: { huXiLv: [], xinLv: [], timeValue: [], spoLv: [], swLv: [] },
       lineChartTitle: '生理数据图表（br:呼吸率、hr:心率）',
-      videoSrc: 'webrtc://10.112.147.109/live/livestream',
+      videoSrc: '',
+      nowVideoSrcIP: '',
+      defaultVideoSrcIP: '10.112.147.109',
       // videoSrc: 'webrtc://172.22.192.1/live/pushstream',
       
       
@@ -230,6 +239,16 @@ export default {
       })
       console.log(res);
     },
+    async sendSrc() {
+      this.videoSrc = `webrtc://${this.nowVideoSrcIP}/live/pushstream`
+      localStorage.setItem('videoSrcIP', this.nowVideoSrcIP);
+      const res = await request.get('/W/control/pushurl',{
+        params: {
+          push_url: this.nowVideoSrcIP,
+        }
+      })
+      console.log(res);
+    },
     async chooseAlgorithm(option) {
       this.algorithmOptionLabel = option; // 更新当前选项显示
       let index;
@@ -285,6 +304,10 @@ export default {
     },
   },
   watch: {
+    // 监听 videoSrc 的变化，每当 videoSrc 变化时，存储到 localStorage
+    // videoSrc(newValue) {
+    //   localStorage.setItem('videoSrc', newValue); // 存储修改后的值
+    // },
     cWidthAndHeightComputed: { // 监听页面宽度或者高度
       handler: function (val, oldval) {
         //console.log("cWidthAndHeightComputedMiddle", val, oldval)
@@ -334,14 +357,21 @@ export default {
       deep: true,
     },
   },
-  // created() {
+  created() {
   //   Bus.$on("bombChartGroupAndPerson", (data) => {
   //     console.log("图标信息:", data);
   //     this.middlePersonInform.groupId = data.groupId;
   //     this.middlePersonInform.personId = data.personId;
   //     this.componentState = data.State;
   //   });
-  // },
+    const savedVideoSrcIP = localStorage.getItem('videoSrcIP');
+    if (savedVideoSrcIP) {
+      this.nowVideoSrc = savedVideoSrcIP // 如果有，使用保存的值
+    } else {
+      this.nowVideoSrc = this.defaultVideoSrcIP; // 没有的话使用默认值
+    }
+    this.videoSrc = `webrtc://${this.nowVideoSrc}/live/pushstream`
+  },
   beforeDestroy() {
     Bus.$off('bombIndividuationGroupAndPerson');
   }
